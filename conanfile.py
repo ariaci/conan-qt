@@ -255,6 +255,7 @@ class QtConan(ConanFile):
 
         for patch in ["cc04651dea4c4678c626cb31b3ec8394426e2b25.diff", "fffe5d622549f85968ea0be9717b90cbc020be71.diff"]:
             tools.patch("qt5/qtbase", patch)
+        tools.patch("qt5/qtwebengine", "qtwebengine-common-pri.diff")
 
     def _xplatform(self):
         if self.settings.os == "Linux":
